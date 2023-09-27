@@ -1,0 +1,12 @@
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\bin\Debug\net6.0\TaskBoard.Data.deps.json
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\bin\Debug\net6.0\TaskBoard.Data.dll
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\bin\Debug\net6.0\TaskBoard.Data.pdb
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\obj\Debug\net6.0\TaskBoard.Data.csproj.AssemblyReference.cache
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\obj\Debug\net6.0\TaskBoard.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\obj\Debug\net6.0\TaskBoard.Data.AssemblyInfoInputs.cache
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\obj\Debug\net6.0\TaskBoard.Data.AssemblyInfo.cs
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\obj\Debug\net6.0\TaskBoard.Data.csproj.CoreCompileInputs.cache
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\obj\Debug\net6.0\TaskBoard.Data.dll
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\obj\Debug\net6.0\refint\TaskBoard.Data.dll
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\obj\Debug\net6.0\TaskBoard.Data.pdb
+D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\06-08-10TaskBoardApp\TaskBoard.Data\obj\Debug\net6.0\ref\TaskBoard.Data.dll
