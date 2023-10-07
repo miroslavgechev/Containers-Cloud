@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Worker
+build_property.ProjectDir = D:\Miro\University\SoftUni\Courses\Containers-Cloud\04ContainersAndDockerWorkshop\11BlueVsGreenApp\worker\src\Worker\
