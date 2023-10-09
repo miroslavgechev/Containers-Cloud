@@ -1,11 +1,19 @@
 version: '3'
 
 services:
-    app:
-      build: .
-      volumes:
-        - .:/posio
-      environment:
-        - POSIO_SETTINGS=/app/config.py
-      ports:
-        - 5000:5000
+  app:
+    build: .
+    image: posiocrmiro.azurecr.io/posio
+    volumes:
+      - posio:/posio
+    environment:
+      - POSIO_SETTINGS=/app/config.py
+    ports:
+      - 5000:5000
+
+volumes:
+  posio:
+    driver: azure_file
+    driver_opts:
+      share_name: posio
+      storage_account_name: posiostoraaccountmiro
