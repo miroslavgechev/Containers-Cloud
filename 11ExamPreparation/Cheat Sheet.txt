@@ -1,0 +1,84 @@
+1. Deploy to Azure via Docker
+
+BUILD A CUSTOM IMAGE(Use Visual Studio):
+-> Create Docker file via Visual Studio
+	--> Web App Right Click -> Add -> Docker Support -> Linux
+-> Move Dockerfile to main Dir
+
+-> docker build -t homies . 
+
+-> (optional) docker run -p 80:80 homies
+
+ORCHESTRATE CONTAINERS (Use Visual Studio Code + ChatGPT):
+-> Create YML file
+
+-> docker volume create sqldata
+-> docker run -e ACCEPT_EULA=Y -e MSSQL_SA_PASSWORD=myStrongPassword12# -p 1433:1433  -v sqldata:/var/opt/mssql/sqlserver --name sqlserver -d mcr.microsoft.com/mssql/server
+
+-> (optional) docker-compose build
+-> (optional) docker-compose up -d
+-> https://www.composerize.com/
+
+CREATE AZURE CONTAINER REGISTRY
+-> az login
+-> az group create --name "miroslav.gechevhomiessrg" --location westeurope
+-> az acr create --resource-group miroslav.gechevhomiessrg --name "miroslavgechevhomiesscr" --sku Basic
+
+PUSH IMAGE TO AZURE CONTAINER REGISTRY
+-> docker tag homies miroslavgechevhomiesscr.azurecr.io/homies
+(loginServer)/name
+-> replace image name in YML file
+-> az acr login --name miroslavgechevhomiesscr.azurecr.io/homies
+-> docker push miroslavgechevhomiesscr.azurecr.io/homies
+
+CREATE AZURE CONTEXT
+-> docker context ls
+-> docker context create aci homiecontext
+-> docker context use homiecontext
+
+DEPLOY APP TO AZURE CONTAINER INSTANCES
+-> Add DOMAINNAME to YML file!
+-> docker-compose up -d
+
+RUN THE APP IN Azure
+-> Run the app via the ip address and the fqdn
+
+2. Deploy to Azure via Terraform
+
+-> Create Repository in GitHub with resources
+-> Create a Terraform folder
+
+-> Check All Configuration Files
+-> Replace GitHub link
+
+-> terraform init
+-> terraform validate
+-> terraform apply -var-file="values.tfvars"
+
+3. Set Up App Monitoring
+
+SET UP PROMETHEUS AND BLACKBOX EXPORTER
+-> docker context use default
+-> docker run -p 9115:9115 quay.io/prometheus/blackbox-exporter
+-> Check if it works: http://localhost:9115/probe?target=https://softuni.org
+
+-> Create prometheus-exam.yml
+-> .\prometheus.exe --config.file prometheus-exam.yml
+-> http://localhost:9090/targets?search=
+
+SET UP ALERT MANAGER
+-> Create alertmanager-exam.yml
+-> .\alertmanager.exe --config.file alertmanager-exam.yml
+
+-> Create alert-rules-exam.yml
+-> Update prometheus-exam.yml
+-> .\alertmanager.exe --config.file alertmanager-exam.yml
+-> .\prometheus.exe --config.file prometheus-exam.yml
+
+-> Should Work
+
+SET UP GRAFANA
+-> Grafana -> Connections -> Add New Connection -> Prometheus -> Add New data source -> Save & Test
+-> Dashboard -> New -> ...
+-> Add required visualization and metric
+-> Export to JSON
