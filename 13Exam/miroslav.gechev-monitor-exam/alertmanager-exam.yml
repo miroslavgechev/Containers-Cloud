@@ -8,4 +8,4 @@ route:
 receivers:
   - name: "web.hook"
     webhook_configs:
-      - url: https://webhook.site/ec6786c8-0838-429c-a08e-3fea41f95c64
+      - url: https://webhook.site/{webhook.site.id}
